@@ -101,6 +101,13 @@ def sarch_info():
         print('你输入的用户名不对')
 
 
+# 打印所有学员信息
+def print_name():
+    global info
+    for i in info:
+        print(f"学生的学号是{i['id']}\t学生的电话号码是{i['tel']}\t学生的名字是{i['name']}")   # f {} 格式输出
+
+
 def info_print():
     print('请选择功能--------------')
     print('1-添加学员')
@@ -137,9 +144,12 @@ while True:
         # print('查询')
         sarch_info()
     elif user_num == 5:
-        print('显示所有学员信息')
+        # print('显示所有学员信息')
+        print_name()
     elif user_num == 6:
-        print('退出系统')
-        break
+        # print('退出系统')
+        exit_falg = input('确定要退出吗？ yes or no')
+        if exit_falg == 'yes':
+            break
     else:
         print('输入的功能序号有误')
