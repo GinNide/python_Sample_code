@@ -1,6 +1,6 @@
 # .find()
 # .index()
-# .rfind()
+# .rfind()   从右边开始
 # .count()
 mysql = 'Use other peoples hearts to play mahjong to opposite wanda'
 print(mysql.find('to',5,30))
