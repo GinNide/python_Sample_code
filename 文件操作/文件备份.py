@@ -10,10 +10,15 @@ print(old_name)
 index = old_name.rfind('.')
 # print(index)
 
+# 有效文件才执行备份
+if index > 0:
+    postfix = old_name[index:]
 # 切片找原名字
 # print(old_name[:index])   提取名字　index为下标地址
 # print(old_name[index:])   提取后缀名
-new_name = old_name[:index] + '[备份]' + old_name[index:]
+#new_name = old_name[:index] + '[备份]' + old_name[index:]
+new_name = old_name[:index] + '[备份]' + postfix
+
 # print(new_name)
 
 
@@ -29,6 +34,6 @@ while True:
 
     new_f.write(con)
 
-old_f.close()
+old_f.close()   #　关闭文件
 new_f.close()
 
